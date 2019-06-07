@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/06 12:56:22 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 15:43:24 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
+#include "Zombie.hpp"
+# include <iostream>
+# include <string>
 
-PhoneBook::PhoneBook( void )
+class ZombieHorde
 {
-	return ;
-}
+    public:
+        ZombieHorde(int);
+        ~ZombieHorde();
+        void    announce();
+        
+    private:
+        int     _N;
+        Zombie **_store;
+};
 
-PhoneBook::~PhoneBook( void ) {	return ; }
-
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
-}
-
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
-
-	c.searchCont(cont, numConts);
-	return ;
-}
+#endif

@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/06 13:55:46 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 16:06:51 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#include "ZombieHorde.hpp"
 
-PhoneBook::PhoneBook( void )
+int     main()
 {
-	return ;
-}
-
-PhoneBook::~PhoneBook( void ) {	return ; }
-
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
-}
-
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
-
-	c.searchCont(cont, numConts);
-	return ;
+    srand(time(NULL));
+    ZombieHorde zombie = ZombieHorde(20);
+    zombie.announce();
+    return (0);
 }

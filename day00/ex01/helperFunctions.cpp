@@ -1,22 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   helperFunctions.cpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/04 14:20:25 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/05 13:27:33 by mmahloko         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.class.hpp"
 
 void                searchPage(std::string dets, int len)
-{//re-visit setw
-    int sub;
-
-    sub = 0;
-    std::cout << "|";
-    if (len < 10) {
-        sub = 10 - len;
-        while (sub--)
-            std::cout << " ";
-        std::cout << dets;
-    }
-    else {
-        while (sub < 9)
-            std::cout << dets[sub++];
-        std::cout << ".";
-        }
+{
+    if (len > 10)
+        dets.replace(9, len, 1, '.');
+    std::cout<< '|' << std::setfill(' ') << std::setw(10) << dets;
     return ;
 }
 
@@ -53,4 +53,10 @@ std::string         contType(int t)
     else if (t == 9)
         return "Underwear Color : ";
     return "Darkest Secret  : ";
+}
+
+void        flushInput()
+{ 
+    	    std::cin.clear();
+        	std::cin.ignore(INT_MAX, '\n'); // NB: preferred method for flushing cin
 }

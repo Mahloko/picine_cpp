@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/05 16:16:46 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 16:31:13 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
+# include <iostream>
+# include <string>
+# include <ctime>
+# include <cstdlib>
+# include "Zombie.hpp"
 
-PhoneBook::PhoneBook( void )
+class Zombie
 {
-	return ;
-}
+    public:
+        Zombie();
+        ~Zombie();
+        void    announce();
+        void    setName(std::string);
+        void    setType(std::string);
+    private:
+        std::string _type;
+        std::string _name;
+};
 
-PhoneBook::~PhoneBook( void ) {	return ; }
-
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
-}
-
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
-
-	c.searchCont(cont, numConts);
-	return ;
-}
+#endif

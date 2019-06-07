@@ -19,12 +19,12 @@ void    ponyOntheHeap()
 
 int     main()
 {
-    std::cout << "------------- HEAP  MEMORY -------------" << std::endl;
+    std::cout << "------------- STACK  MEMORY -------------" << std::endl;
     ponyOnTheStack();
-    std::cout << std::endl << "---------- END OF STACK MEMORY ----------" << std::endl;
+    std::cout << "---------- END OF STACK MEMORY ----------" << std::endl;
 
     std::cout << "------------- HEAP  MEMORY -------------" << std::endl;
     ponyOntheHeap();
-    std::cout << std::endl << "---------- END OF HEAP MEMORY ----------" << std::endl;
+    std::cout << "---------- END OF HEAP MEMORY ----------" << std::endl;
     return (0);
 }

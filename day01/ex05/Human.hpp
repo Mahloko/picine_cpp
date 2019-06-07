@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/06 17:16:46 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 17:50:37 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#ifndef HUMAN_HPP
+# define HUMAN_HPP
+# include "Brain.hpp"
 
-PhoneBook::PhoneBook( void )
+class   Human
 {
-	return ;
-}
+    public:
+        Human();
+        ~Human();
+        std::string identify();
+        Brain       &getBrain();
+    private:
+        Brain  brain;
+};
 
-PhoneBook::~PhoneBook( void ) {	return ; }
-
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
-}
-
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
-
-	c.searchCont(cont, numConts);
-	return ;
-}
+#endif

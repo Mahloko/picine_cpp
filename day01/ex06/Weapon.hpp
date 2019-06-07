@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/06 18:36:37 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 18:36:39 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-PhoneBook::PhoneBook( void )
-{
-	return ;
-}
+# include <string>
+# include <iostream>
 
-PhoneBook::~PhoneBook( void ) {	return ; }
+class Weapon{
+    public:
+        Weapon(std::string);
+        Weapon(void);
+        ~Weapon(void);
+        void         setType(std::string);
+        std::string  getType(void) const;
+    
+    private:
+        std::string _type;
+};
 
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
-}
-
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
-
-	c.searchCont(cont, numConts);
-	return ;
-}
+#endif

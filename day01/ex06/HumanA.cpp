@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/06 18:36:22 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 18:36:23 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#include "HumanA.hpp"
+#include "Weapon.hpp"
+#include <iostream>
+#include <string>
 
-PhoneBook::PhoneBook( void )
-{
-	return ;
+HumanA::HumanA(std::string name, Weapon& arm): _name(name), _weapon(arm){
+    return ;
 }
 
-PhoneBook::~PhoneBook( void ) {	return ; }
-
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
+HumanA::~HumanA(void){
+    return ;
 }
 
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
-
-	c.searchCont(cont, numConts);
-	return ;
+void    HumanA::attack(void) const{
+    std::cout << this->_name << " attacks with his " << this->_weapon.getType() << std::endl;
+    return ;
 }

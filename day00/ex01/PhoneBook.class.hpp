@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.class.hpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/04 14:20:06 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/04 14:20:07 by mmahloko         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_CLASS_HPP
 # define PHONEBOOK_CLASS_HPP
 
@@ -6,14 +18,11 @@
 class	PhoneBook
 {
 	public:
-		std::string	Contact::*s[11];
 		
 		PhoneBook( void );
 		~PhoneBook( void );
 		Contact	addCont();
-		void	contDets(Contact cont[], int) const;
 		void	searchCont(Contact cont[], int) const;
-		void	disContDets(Contact) const;
 };
 
 #endif

@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmahloko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:19:56 by mmahloko          #+#    #+#             */
-/*   Updated: 2019/06/05 13:27:24 by mmahloko         ###   ########.fr       */
+/*   Created: 2019/06/06 18:36:35 by mmahloko          #+#    #+#             */
+/*   Updated: 2019/06/06 18:36:36 by mmahloko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
+#include "Weapon.hpp"
+#include <string>
+#include <iostream>
 
-PhoneBook::PhoneBook( void )
-{
-	return ;
+Weapon::Weapon(std::string str): _type(str){
+    return ;
 }
 
-PhoneBook::~PhoneBook( void ) {	return ; }
-
-Contact	PhoneBook::addCont()
-{
-	Contact		cont;
-
-	cont.createContact();
-	return cont;
+Weapon::Weapon(void){
+    return ;
 }
 
-void	PhoneBook::searchCont(Contact cont[], int numConts) const
-{
-	Contact		c;
+Weapon::~Weapon(void){
+    return ;
+}
 
-	c.searchCont(cont, numConts);
-	return ;
+void    Weapon::setType(std::string str){
+    this->_type = str;
+    return ;
+}
+
+std::string     Weapon::getType(void) const{
+    return (this->_type);
 }
